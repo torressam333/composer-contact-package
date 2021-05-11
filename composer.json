@@ -1,0 +1,55 @@
+{
+    "name": "phantomdev/contact",
+    "description": "Ummmm I think this is a simple contact form etc",
+    "keywords": [
+        "phantomdev",
+        "contact"
+    ],
+    "homepage": "https://github.com/phantomdev/contact",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Samuel",
+            "email": "samuel.torres@goodwillaz.org",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "^8.0",
+        "ext-http": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phantomdev\\Contact\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phantomdev\\Contact\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Phantomdev\\Contact\\ContactServiceProvider"
+            ],
+            "aliases": {
+                "Contact": "Phantomdev\\Contact\\ContactFacade"
+            }
+        }
+    }
+}
